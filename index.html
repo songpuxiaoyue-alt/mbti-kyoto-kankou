@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>MBTIで行く京都</title>
+</head>
+<body>
+  <h1>MBTIで行く 京都おすすめスポット</h1>
+
+  <p>MBTIを入力してね（例：INFP）</p>
+  <input id="mbti" placeholder="INFP">
+  <button onclick="check()">見る</button>
+
+  <p id="result"></p>
+
+  <script>
+    function check() {
+      const m = document.getElementById("mbti").value.toUpperCase();
+      let r = "";
+
+      if (m === "INFP") r = "哲学の道・銀閣寺";
+      else if (m === "ENFP") r = "嵐山・渡月橋";
+      else if (m === "INTJ") r = "龍安寺・東福寺";
+      else r = "清水寺";
+
+      document.getElementById("result").textContent = "おすすめ：" + r;
+    }
+  </script>
+</body>
+</html>
