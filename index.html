@@ -19,21 +19,24 @@ function check() {
   let html = "";
 
   if (m === "INTJ") {
-    html = 
+    html = `
       <h2>京セラ美術館</h2>
 
-<img src="IMG_1688.jpeg" width="300">
-<img src="IMG_1691.jpeg" width="300">
-<h3>アクセス</h3>
-<img src="IMG_1759.jpeg" width="300">
-<p>
-地下鉄東西線「東山駅」から徒歩約8分。
+      <img src="IMG_1688.jpeg" width="300">
+      <img src="IMG_1691.jpeg" width="300">
 
-<p>
-INTJ（建築家）のあなたは、静かに思考を深められる場所を好む傾向があります。  
-京セラ美術館は落ち着いた空間で芸術に向き合えるだけでなく、  
-併設された日本庭園で自然も楽しめます。
-</p>
+      <h3>アクセス</h3>
+      <img src="IMG_1759.jpeg" width="300">
+
+      <p>
+        地下鉄東西線「東山駅」から徒歩約8分。
+      </p>
+
+      <p>
+        INTJ（建築家）のあなたは、静かに思考を深められる場所を好む傾向があります。  
+        京セラ美術館は落ち着いた空間で芸術に向き合えるだけでなく、  
+        併設された日本庭園で自然も楽しめます。
+      </p>
     `;
   } else {
     html = "<p>今はINTJのみ対応しています</p>";
@@ -41,6 +44,6 @@ INTJ（建築家）のあなたは、静かに思考を深められる場所を�
 
   document.getElementById("result").innerHTML = html;
 }
-</script>
+</script><p>
 </body>
 </html>
