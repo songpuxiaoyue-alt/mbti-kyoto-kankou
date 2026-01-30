@@ -5,26 +5,42 @@
   <title>MBTIで行く京都</title>
 </head>
 <body>
-  <h1>MBTIで行く 京都おすすめスポット</h1>
+<h1>MBTIで行く 京都おすすめスポット</h1>
 
-  <p>MBTIを入力してね（例：INFP）</p>
-  <input id="mbti" placeholder="INFP">
-  <button onclick="check()">見る</button>
+<p>MBTIを入力してね（例：INTJ）</p>
+<input id="mbti" placeholder="INTJ">
+<button onclick="check()">見る</button>
 
-  <p id="result"></p>
+<div id="result"></div>
 
-  <script>
-    function check() {
-      const m = document.getElementById("mbti").value.toUpperCase();
-      let r = "";
+<script>
+function check() {
+  const m = document.getElementById("mbti").value.toUpperCase();
+  let html = "";
 
-      if (m === "INFP") r = "哲学の道・銀閣寺";
-      else if (m === "ENFP") r = "嵐山・渡月橋";
-      else if (m === "INTJ") r = "龍安寺・東福寺";
-      else r = "清水寺";
+  if (m === "INTJ") {
+    html = `
+      <h2>京セラ美術館</h2>
 
-      document.getElementById("result").textContent = "おすすめ：" + r;
-    }
-  </script>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Kyoto_City_Kyocera_Museum_of_Art.jpg"
+           width="300">
+
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Kyoto_City_Kyocera_Museum_of_Art_Garden.jpg"
+           width="300">
+
+      <p>
+        INTJ（建築家）のあなたは、静かに思考を深められる場所を好む傾向があります。<br>
+        京セラ美術館は、落ち着いた空間で芸術に向き合えるだけでなく、<br>
+        併設された日本庭園で自然も楽しめます。<br><br>
+        近くには平安神宮やみやこめっせもあり、知的で充実した一日を過ごせるでしょう。
+      </p>
+    `;
+  } else {
+    html = "<p>今はINTJのみ対応しています</p>";
+  }
+
+  document.getElementById("result").innerHTML = html;
+}
+</script>
 </body>
 </html>
